@@ -3,7 +3,7 @@ const { User } = require("../models/user");
 const bcrypt = require("bcrypt");
 const Joi = require("joi");
 const passport = require("passport");
-const CLIENT_URL = "https://five6250o.onrender.com/editing";
+const CLIENT_URL = "";
 router.get("/login/success", (req, res) => {
 	if (req.user) {
 	  res.status(200).json({
@@ -28,7 +28,7 @@ router.get("/logout", (req, res) => {
 	  failureRedirect: "/login/failed",
 	})
   );
-router.post("https://five6250o.onrender.com/", async (req, res) => {
+router.post("/", async (req, res) => {
 	try {
 		const { error } = validate(req.body);
 		if (error)

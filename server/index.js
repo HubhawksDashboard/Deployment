@@ -19,7 +19,7 @@ app.use(passport.session());
 
 app.use(
   cors({
-    origin: "https://five6250o.onrender.com",
+    origin: "http:localhost:3000",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
